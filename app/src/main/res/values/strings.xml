@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Bunk Tracker</string>
+    <string name="add_subject">Add Subject</string>
+    <string name="record_bunk">Record Bunk</string>
+    <string name="subject_report">Subject Report</string>
+    <string name="about">About</string>
+    <string name="exit">Exit</string>
 </resources>
