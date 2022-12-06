@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -21,12 +20,28 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.5">
-
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="@string/bunk_tracker"
+            android:layout_gravity="center"
+            android:layout_marginTop="150dp"
+            android:textColor="@color/white"
+            android:textStyle="bold">
+        </TextView>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="165dp"
+            android:layout_marginRight="165dp"
+            android:background="@android:color/white" />
         <LinearLayout
             android:layout_width="227dp"
             android:layout_height="320dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="35dp"
             android:background="@drawable/menu_layer"
             android:orientation="vertical">
 
@@ -78,8 +93,7 @@
                 android:background=""
                 android:textColor="#EF4040"
                 android:textStyle="bold"
-                app:cornerRadius="22dp"
-                />
+                app:cornerRadius="22dp" />
 
         </LinearLayout>
     </LinearLayout>
