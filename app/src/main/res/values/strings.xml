@@ -7,4 +7,5 @@
     <string name="exit">Exit</string>
     <string name="bunk_tracker">BUNK TRACKER</string>
     <string name="toolbar">toolbar</string>
+    <string name="toolbartitle">Add Subject</string>
 </resources>
