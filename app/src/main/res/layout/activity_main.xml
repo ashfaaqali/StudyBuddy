@@ -52,7 +52,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="40dp"
                 android:background="@android:color/transparent"
-                android:onClick="openAct"
+                android:onClick="addSub"
                 android:text="@string/add_subject"
                 android:textColor="#000000"
                 android:textStyle="bold"
@@ -66,6 +66,7 @@
                 android:layout_gravity="center"
                 android:backgroundTint="#EF4040"
                 android:text="@string/record_bunk"
+                android:onClick="recBunk"
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 app:cornerRadius="22dp" />

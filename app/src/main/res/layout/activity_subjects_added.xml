@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddSubject">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:background="#313FB8">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/add_sub">
+
+            <ImageView
+                android:id="@+id/tick"
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:src="@drawable/tick"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"/>
+
+            <TextView
+                android:id="@+id/confirmationText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tick"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="Subjects added!\nNow you can record the bunks."
+                android:textAlignment="center" />
+
+            <Button
+                android:text="Main Menu"
+                android:id="@+id/mainMenuBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/confirmationText"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="28dp"
+                android:backgroundTint="#313FB8"
+                android:textStyle="bold"
+                app:cornerRadius="20dp"
+                android:textSize="13sp"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

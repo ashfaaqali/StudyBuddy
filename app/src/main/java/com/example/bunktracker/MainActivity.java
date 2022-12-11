@@ -14,8 +14,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         }
-        public void openAct (View view){
-        Intent intent = new Intent(this, AddSubject.class);
-        startActivity(intent);
+        // Intent for Add Subject Activity
+        public void addSub (View view){
+            Intent intent = new Intent(this, AddSubject.class);
+            startActivity(intent);
+        }
+        // Intent for Record Bunk Activity
+        public void recBunk (View view){
+            Intent intent = new Intent(this, RecordBunk.class);
+            startActivity(intent);
         }
     }
