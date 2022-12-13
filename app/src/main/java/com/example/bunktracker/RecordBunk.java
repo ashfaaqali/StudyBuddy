@@ -2,6 +2,7 @@ package com.example.bunktracker;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -28,10 +29,29 @@ public class RecordBunk extends AppCompatActivity {
             }
         });
 
-        SharedPreferences bt = getSharedPreferences("Bunk Tracker", MODE_PRIVATE);
-        String str = bt.getString("Sub", "");
-        TextView b = findViewById(R.id.abc);
-        b.setText(str);
+        SharedPreferences bt = getApplicationContext().getSharedPreferences("BunkTracker", Context.MODE_PRIVATE);
+        String sub1 = bt.getString("Sub1", "");
+        String sub2 = bt.getString("Sub2", "");
+        String sub3 = bt.getString("Sub3", "");
+        String sub4 = bt.getString("Sub4", "");
+        String sub5 = bt.getString("Sub5", "");
+        String sub6 = bt.getString("Sub6", "");
+
+        TextView subject1, subject2, subject3, subject4, subject5, subject6;
+
+        subject1 = findViewById(R.id.sub1);
+        subject2 = findViewById(R.id.sub2);
+        subject3 = findViewById(R.id.sub3);
+        subject4 = findViewById(R.id.sub4);
+        subject5 = findViewById(R.id.sub5);
+        subject6 = findViewById(R.id.sub6);
+
+        subject1.setText(sub1);
+        subject2.setText(sub2);
+        subject3.setText(sub3);
+        subject4.setText(sub4);
+        subject5.setText(sub5);
+        subject6.setText(sub6);
 
 
     }

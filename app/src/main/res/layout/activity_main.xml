@@ -37,6 +37,7 @@
             android:layout_marginLeft="165dp"
             android:layout_marginRight="165dp"
             android:background="@android:color/white" />
+
         <LinearLayout
             android:layout_width="227dp"
             android:layout_height="320dp"

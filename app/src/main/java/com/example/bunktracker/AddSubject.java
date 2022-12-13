@@ -62,13 +62,14 @@ public class AddSubject extends AppCompatActivity {
                     SharedPreferences bt = getSharedPreferences("BunkTracker", MODE_PRIVATE);
                     SharedPreferences.Editor spEd = bt.edit();
 
-                    spEd.putString("Sub", sub1);
-                    spEd.putString("Sub", sub2);
-                    spEd.putString("Sub", sub3);
-                    spEd.putString("Sub", sub4);
-                    spEd.putString("Sub", sub6);
-                    spEd.putString("Sub", sub5);
+                    spEd.putString("Sub1", sub1);
+                    spEd.putString("Sub2", sub2);
+                    spEd.putString("Sub3", sub3);
+                    spEd.putString("Sub4", sub4);
+                    spEd.putString("Sub5", sub6);
+                    spEd.putString("Sub6", sub5);
                     spEd.apply();
+
                     Intent intent = new Intent(AddSubject.this, SubjectsAdded.class);
                     startActivity(intent);
                 }
