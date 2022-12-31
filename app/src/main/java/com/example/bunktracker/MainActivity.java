@@ -13,7 +13,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        }
+
+        // Exit Button
+        Button exitBtn = findViewById(R.id.exit);
+        exitBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+    }
         // Intent for Add Subject Activity
         public void addSub (View view){
             Intent intent = new Intent(this, AddSubject.class);

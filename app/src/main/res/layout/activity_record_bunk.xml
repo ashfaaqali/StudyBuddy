@@ -7,63 +7,104 @@
     tools:context=".RecordBunk">
 
     <include android:id="@+id/toolb" layout="@layout/toolbar"/>
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:layout_centerInParent="true">
 
-    <TextView
-        android:id="@+id/sub1"
-        android:text="NoText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_below="@id/toolb"
-        android:textSize="20sp"/>
+        android:layout_centerVertical="true"
+        android:background="#313FB8">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choose A Subject"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_marginStart="25dp"
+            android:background="#313FB8"/>
 
-    <TextView
-        android:id="@+id/sub2"
-        android:text="NoText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:layout_below="@id/sub1"
-        android:textSize="20sp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="700dp"
+        android:orientation="vertical"
+        android:layout_marginTop="70dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/add_sub">
+        <TextView
+            android:id="@+id/sub1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolb"
+            android:layout_marginBottom="20dp"
+            android:text="NoText"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp" />
 
-    <TextView
-        android:id="@+id/sub3"
-        android:text="NoText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:layout_below="@id/sub2"
-        android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/sub2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_below="@id/sub1"
+            android:layout_marginBottom="20dp"
+            android:layout_marginStart="30dp"
+            android:text="NoText"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
 
-    <TextView
-        android:id="@+id/sub4"
-        android:text="NoText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:layout_below="@id/sub3"
-        android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/sub3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_below="@id/sub2"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/black"
+            android:text="NoText"
+            android:layout_marginStart="30dp"
+            android:textSize="20sp" />
 
-    <TextView
-        android:id="@+id/sub5"
-        android:text="NoText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:layout_below="@id/sub4"
-        android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/sub4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_below="@id/sub3"
+            android:layout_marginBottom="20dp"
+            android:layout_marginStart="30dp"
+            android:text="NoText"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
 
-    <TextView
-        android:id="@+id/sub6"
-        android:text="NoText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/sub5"
-        android:textSize="20sp"/>
-</LinearLayout>
+        <TextView
+            android:id="@+id/sub5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginStart="30dp"
+            android:layout_below="@id/sub4"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/black"
+            android:text="NoText"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/sub6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_below="@id/sub5"
+            android:layout_marginStart="30dp"
+            android:text="NoText"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+    </LinearLayout>
+    </RelativeLayout>
 </RelativeLayout>
