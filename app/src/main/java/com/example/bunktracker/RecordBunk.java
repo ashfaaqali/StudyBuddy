@@ -12,6 +12,12 @@ import android.widget.Toast;
 
 public class RecordBunk extends AppCompatActivity {
 
+
+    public void addBunk() {
+
+        super.onBackPressed();
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
