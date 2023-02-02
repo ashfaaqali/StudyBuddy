@@ -82,7 +82,8 @@
                 android:background="@android:color/transparent"
                 android:textColor="#000000"
                 android:textStyle="bold"
-                app:cornerRadius="22dp" />
+                app:cornerRadius="22dp"
+                android:onClick="subReport"/>
 
             <Button
                 android:id="@+id/about"

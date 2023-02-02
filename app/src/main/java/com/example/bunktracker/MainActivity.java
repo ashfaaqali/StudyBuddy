@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +32,11 @@ public class MainActivity extends AppCompatActivity {
         // Intent for Record Bunk Activity
         public void recBunk (View view){
             Intent intent = new Intent(this, RecordBunk.class);
+            startActivity(intent);
+        }
+        // Intent for Subject Report Activity
+        public void subReport (View view){
+            Intent intent = new Intent(this, SubjectReport.class);
             startActivity(intent);
         }
     }
