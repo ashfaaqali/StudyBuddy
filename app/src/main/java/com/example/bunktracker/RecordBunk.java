@@ -17,7 +17,7 @@ public class RecordBunk extends AppCompatActivity {
     static int presentCount1, presentCount2, presentCount3, presentCount4, presentCount5, presentCount6;
     static int bunkCount1, bunkCount2, bunkCount3, bunkCount4, bunkCount5, bunkCount6;
     static int cancellationCount1, cancellationCount2, cancellationCount3, cancellationCount4, cancellationCount5, cancellationCount6;
-    private static String sub1, sub2, sub3, sub4, sub5, sub6;
+    static String sub1, sub2, sub3, sub4, sub5, sub6;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

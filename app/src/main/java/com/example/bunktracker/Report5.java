@@ -18,7 +18,7 @@ import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
-public class Report1 extends AppCompatActivity {
+public class Report5 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,30 +58,30 @@ public class Report1 extends AppCompatActivity {
 
     protected void TotalClass(){
         TextView totalClassTV = findViewById(R.id.totalClassHeld);
-        String total = String.valueOf(RecordBunk.presentCount1+RecordBunk.bunkCount1+RecordBunk.cancellationCount1);
+        String total = String.valueOf(RecordBunk.presentCount5+RecordBunk.bunkCount5+RecordBunk.cancellationCount5);
         totalClassTV.setText(total);
     }
     protected void Present(){
         TextView present = findViewById(R.id.present);
-        String presentCount = String.valueOf(RecordBunk.presentCount1);
+        String presentCount = String.valueOf(RecordBunk.presentCount5);
         present.setText(presentCount);
     }
     protected void BunkedClasses(){
         TextView bunkedClassTV = findViewById(R.id.bunkedClassTextView);
-        String bunkedClass = String.valueOf(RecordBunk.bunkCount1);
+        String bunkedClass = String.valueOf(RecordBunk.bunkCount5);
         bunkedClassTV.setText(bunkedClass);
     }
     protected void Cancelled(){
         TextView Cancelled = findViewById(R.id.cancelled);
-        String cancelCount = String.valueOf(RecordBunk.cancellationCount1);
+        String cancelCount = String.valueOf(RecordBunk.cancellationCount5);
         Cancelled.setText(cancelCount);
     }
     protected void Percentage(){
         TextView currentPercentageTV = findViewById(R.id.currentPer);
-        float total = RecordBunk.presentCount1+RecordBunk.bunkCount1+RecordBunk.cancellationCount1;
-        float currentPercentage = ((RecordBunk.presentCount1+RecordBunk.cancellationCount1)/total)*100;
+        float total = RecordBunk.presentCount5+RecordBunk.bunkCount5+RecordBunk.cancellationCount5;
+        float currentPercentage = ((RecordBunk.presentCount5+RecordBunk.cancellationCount5)/total)*100;
         String s = Float.toString(currentPercentage);
-        if (RecordBunk.presentCount1==0 && RecordBunk.presentCount1+RecordBunk.bunkCount1+RecordBunk.cancellationCount1==0 && RecordBunk.cancellationCount1==0){
+        if (RecordBunk.presentCount5==0 && RecordBunk.presentCount5+RecordBunk.bunkCount5+RecordBunk.cancellationCount5==0 && RecordBunk.cancellationCount5==0){
             currentPercentageTV.setText("0%");
         } else {
             currentPercentageTV.setText(String.format("%.1f", currentPercentage)+" %");
@@ -89,19 +89,19 @@ public class Report1 extends AppCompatActivity {
     }
 
     public void DeleteButton(View view){
-        AlertDialog.Builder builder = new AlertDialog.Builder(Report1.this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(Report5.this);
         builder.setCancelable(true);
-        builder.setMessage("Are you sure you want to delete "+RecordBunk.sub1+"?");
+        builder.setMessage("Are you sure you want to delete "+RecordBunk.sub5+"?");
         builder.setPositiveButton("yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 SharedPreferences bt = getApplicationContext().getSharedPreferences("BunkTracker", Context.MODE_PRIVATE);
                 bt.edit().remove("Sub1").apply();
-                RecordBunk.presentCount1=0;
-                RecordBunk.bunkCount1=0;
-                RecordBunk.cancellationCount1=0;
-                Toast.makeText(Report1.this, "Deleted", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(Report1.this, SubjectReport.class);
+                RecordBunk.presentCount5=0;
+                RecordBunk.bunkCount5=0;
+                RecordBunk.cancellationCount5=0;
+                Toast.makeText(Report5.this, "Deleted", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Report5.this, SubjectReport.class);
                 startActivity(intent);
             }
         });

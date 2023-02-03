@@ -12,10 +12,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class SubjectReport extends AppCompatActivity {
-
+    static String sub1, sub2, sub3, sub4, sub5, sub6;
     private TextView subject1, subject2, subject3, subject4, subject5, subject6;
-    private String sub1;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,16 +28,14 @@ public class SubjectReport extends AppCompatActivity {
         backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                finish();
+                Intent intent = new Intent(SubjectReport.this, MainActivity.class);
+                startActivity(intent);
             }
         });
-
         // METHOD CALLS
         retrieveData();
-        clickLis();
-
     }
-
+//================================================================================================================================================================================================================================
     // METHODS
 
     void retrieveData(){
@@ -57,67 +53,27 @@ public class SubjectReport extends AppCompatActivity {
         if(sub1.length()>0){
             subject1.setText(sub1);
         }
-        String sub2 = bt.getString("Sub2", "");
+        sub2 = bt.getString("Sub2", "");
         if (sub2.length()>0){
             subject2.setText(sub2);
         }
-        String sub3 = bt.getString("Sub3", "");
+        sub3 = bt.getString("Sub3", "");
         if (sub3.length()>0){
             subject3.setText(sub3);
         }
-        String sub4 = bt.getString("Sub4", "");
+        sub4 = bt.getString("Sub4", "");
         if (sub4.length()>0){
             subject4.setText(sub4);
         }
-        String sub5 = bt.getString("Sub5", "");
+        sub5 = bt.getString("Sub5", "");
         if (sub5.length()>0){
             subject5.setText(sub5);
         }
-        String sub6 = bt.getString("Sub6", "");
+        sub6 = bt.getString("Sub6", "");
         if (sub6.length()>0){
             subject6.setText(sub6);
         }
     }
-
-    void clickLis(){
-        subject2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(SubjectReport.this, "Clicked!", Toast.LENGTH_SHORT).show();
-            }
-        });
-        subject3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(SubjectReport.this, "Clicked!", Toast.LENGTH_SHORT).show();
-            }
-        });
-        subject4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(SubjectReport.this, "Clicked!", Toast.LENGTH_SHORT).show();
-            }
-        });
-        subject4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(SubjectReport.this, "Clicked!", Toast.LENGTH_SHORT).show();
-            }
-        });
-        subject5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(SubjectReport.this, "Clicked!", Toast.LENGTH_SHORT).show();
-            }
-        });
-        subject6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(SubjectReport.this, "Clicked!", Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
-
     public void Report1(View view) {
         if (sub1.length()>0){
             Intent i = new Intent(SubjectReport.this, Report1.class);
@@ -126,19 +82,48 @@ public class SubjectReport extends AppCompatActivity {
             Toast.makeText(SubjectReport.this, "No Subject Found!", Toast.LENGTH_SHORT).show();
         }
     }
-
     public void Report2(View view) {
+        if (sub2.length()>0){
+            Intent i = new Intent(SubjectReport.this, Report2.class);
+            startActivity(i);
+        } else{
+            Toast.makeText(SubjectReport.this, "No Subject Found!", Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void Report3(View view) {
+        if (sub3.length()>0){
+            Intent i = new Intent(SubjectReport.this, Report3.class);
+            startActivity(i);
+        } else{
+            Toast.makeText(SubjectReport.this, "No Subject Found!", Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void Report4(View view) {
+        if (sub4.length()>0){
+            Intent i = new Intent(SubjectReport.this, Report4.class);
+            startActivity(i);
+        } else{
+            Toast.makeText(SubjectReport.this, "No Subject Found!", Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void Report5(View view) {
+        if (sub5.length()>0){
+            Intent i = new Intent(SubjectReport.this, Report5.class);
+            startActivity(i);
+        } else{
+            Toast.makeText(SubjectReport.this, "No Subject Found!", Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void Report6(View view) {
+        if (sub6.length()>0){
+            Intent i = new Intent(SubjectReport.this, Report6.class);
+            startActivity(i);
+        } else{
+            Toast.makeText(SubjectReport.this, "No Subject Found!", Toast.LENGTH_SHORT).show();
+        }
     }
 }
