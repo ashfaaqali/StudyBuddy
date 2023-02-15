@@ -19,6 +19,7 @@ import android.widget.Toast;
 import org.w3c.dom.Text;
 
 public class Report2 extends AppCompatActivity {
+    String sub2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,11 +27,11 @@ public class Report2 extends AppCompatActivity {
 
         // RETRIEVING DATA FROM SHARED PRE TO SET IT AS THE TOOLBAR TITLE OF THIS ACTIVITY
         SharedPreferences bt = getApplicationContext().getSharedPreferences("BunkTracker", Context.MODE_PRIVATE);
-        String sub1 = bt.getString("Sub1", "");
+        String sub2 = bt.getString("Sub2", "");
 
         //SETTING THE TOOLBAR TITLE
         TextView toolbarTitle = findViewById(R.id.toolbar_title);
-        toolbarTitle.setText(sub1);
+        toolbarTitle.setText(sub2);
 
         //BACK BUTTON ON TOOLBAR
         ImageView backArrow = findViewById(R.id.back_arrow);
@@ -91,18 +92,17 @@ public class Report2 extends AppCompatActivity {
     public void DeleteButton(View view){
         AlertDialog.Builder builder = new AlertDialog.Builder(Report2.this);
         builder.setCancelable(true);
-        builder.setMessage("Are you sure you want to delete "+RecordBunk.sub2+"?");
+        builder.setMessage("Are you sure you want to delete "+sub2+"?");
         builder.setPositiveButton("yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 SharedPreferences bt = getApplicationContext().getSharedPreferences("BunkTracker", Context.MODE_PRIVATE);
-                bt.edit().remove("Sub1").apply();
+                bt.edit().remove("Sub2").apply();
                 RecordBunk.presentCount2=0;
                 RecordBunk.bunkCount2=0;
                 RecordBunk.cancellationCount2=0;
-                Toast.makeText(Report2.this, "Deleted", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(Report2.this, SubjectReport.class);
-                startActivity(intent);
+                Toast.makeText(Report2.this, sub2+" deleted!", Toast.LENGTH_SHORT).show();
+                finish();
             }
         });
         builder.setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {

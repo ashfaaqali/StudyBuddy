@@ -19,6 +19,7 @@ import android.widget.Toast;
 import org.w3c.dom.Text;
 
 public class Report4 extends AppCompatActivity {
+    String sub4;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,11 +27,11 @@ public class Report4 extends AppCompatActivity {
 
         // RETRIEVING DATA FROM SHARED PRE TO SET IT AS THE TOOLBAR TITLE OF THIS ACTIVITY
         SharedPreferences bt = getApplicationContext().getSharedPreferences("BunkTracker", Context.MODE_PRIVATE);
-        String sub1 = bt.getString("Sub1", "");
+        String sub4 = bt.getString("Sub4", "");
 
         //SETTING THE TOOLBAR TITLE
         TextView toolbarTitle = findViewById(R.id.toolbar_title);
-        toolbarTitle.setText(sub1);
+        toolbarTitle.setText(sub4);
 
         //BACK BUTTON ON TOOLBAR
         ImageView backArrow = findViewById(R.id.back_arrow);
@@ -96,7 +97,7 @@ public class Report4 extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 SharedPreferences bt = getApplicationContext().getSharedPreferences("BunkTracker", Context.MODE_PRIVATE);
-                bt.edit().remove("Sub1").apply();
+                bt.edit().remove("Sub4").apply();
                 RecordBunk.presentCount4=0;
                 RecordBunk.bunkCount4=0;
                 RecordBunk.cancellationCount4=0;

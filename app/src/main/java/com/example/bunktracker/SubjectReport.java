@@ -28,8 +28,7 @@ public class SubjectReport extends AppCompatActivity {
         backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SubjectReport.this, MainActivity.class);
-                startActivity(intent);
+                finish();
             }
         });
         // METHOD CALLS
@@ -37,7 +36,6 @@ public class SubjectReport extends AppCompatActivity {
     }
 //================================================================================================================================================================================================================================
     // METHODS
-
     void retrieveData(){
 
         subject1 = findViewById(R.id.sub1);

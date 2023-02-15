@@ -13,6 +13,13 @@
         android:theme="@style/Theme.BunkTracker"
         tools:targetApi="31">
         <activity
+            android:name=".about"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Report6"
             android:exported="false">
             <meta-data
@@ -55,12 +62,14 @@
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".SubjectsAdded"
+            android:noHistory="true"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".RecordBunk"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".AddSubject"
+            android:noHistory="true"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"

@@ -19,6 +19,7 @@ import android.widget.Toast;
 import org.w3c.dom.Text;
 
 public class Report5 extends AppCompatActivity {
+    String sub5;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,11 +27,11 @@ public class Report5 extends AppCompatActivity {
 
         // RETRIEVING DATA FROM SHARED PRE TO SET IT AS THE TOOLBAR TITLE OF THIS ACTIVITY
         SharedPreferences bt = getApplicationContext().getSharedPreferences("BunkTracker", Context.MODE_PRIVATE);
-        String sub1 = bt.getString("Sub1", "");
+        String sub5 = bt.getString("Sub5", "");
 
         //SETTING THE TOOLBAR TITLE
         TextView toolbarTitle = findViewById(R.id.toolbar_title);
-        toolbarTitle.setText(sub1);
+        toolbarTitle.setText(sub5);
 
         //BACK BUTTON ON TOOLBAR
         ImageView backArrow = findViewById(R.id.back_arrow);
@@ -96,13 +97,11 @@ public class Report5 extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 SharedPreferences bt = getApplicationContext().getSharedPreferences("BunkTracker", Context.MODE_PRIVATE);
-                bt.edit().remove("Sub1").apply();
+                bt.edit().remove("Sub5").apply();
                 RecordBunk.presentCount5=0;
                 RecordBunk.bunkCount5=0;
                 RecordBunk.cancellationCount5=0;
-                Toast.makeText(Report5.this, "Deleted", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(Report5.this, SubjectReport.class);
-                startActivity(intent);
+                finish();
             }
         });
         builder.setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {

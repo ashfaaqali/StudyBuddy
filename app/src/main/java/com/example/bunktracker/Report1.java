@@ -19,6 +19,7 @@ import android.widget.Toast;
 import org.w3c.dom.Text;
 
 public class Report1 extends AppCompatActivity {
+    String sub1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -89,20 +90,20 @@ public class Report1 extends AppCompatActivity {
     }
 
     public void DeleteButton(View view){
+        SharedPreferences bt = getApplicationContext().getSharedPreferences("BunkTracker", Context.MODE_PRIVATE);
         AlertDialog.Builder builder = new AlertDialog.Builder(Report1.this);
         builder.setCancelable(true);
         builder.setMessage("Are you sure you want to delete "+RecordBunk.sub1+"?");
-        builder.setPositiveButton("yes", new DialogInterface.OnClickListener() {
+        builder.setPositiveButton("Yes",
+                new DialogInterface.OnClickListener() {
             @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                SharedPreferences bt = getApplicationContext().getSharedPreferences("BunkTracker", Context.MODE_PRIVATE);
+            public void onClick(DialogInterface dialogInterface, int which) {
                 bt.edit().remove("Sub1").apply();
                 RecordBunk.presentCount1=0;
                 RecordBunk.bunkCount1=0;
                 RecordBunk.cancellationCount1=0;
-                Toast.makeText(Report1.this, "Deleted", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(Report1.this, SubjectReport.class);
-                startActivity(intent);
+                Toast.makeText(Report1.this, sub1+" deleted", Toast.LENGTH_SHORT).show();
+                finish();
             }
         });
         builder.setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
