@@ -10,4 +10,4 @@ Introducing My First Creation - A Feature-Packed Android App! In which You Can -
 
 *Check Your Current Attendance % 
 
-<img src="https://github.com/ashfaaqali/Bunk-Tracker/blob/master/app/src/main/res/layout/activity_main.xml" width="100" height="100" />
+<img src="https://github.com/ashfaaqali/Bunk-Tracker/blob/master/app/src/main/res/drawable/menu_layer.png" />
