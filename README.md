@@ -10,4 +10,4 @@ Introducing My First Creation - A Feature-Packed Android App! In which You Can -
 
 *Check Your Current Attendance % 
 
-![ashfaq](https://user-images.githubusercontent.com/115345805/219933079-8d89cf87-417a-4595-af9d-3b0c53efa41e.jpg) {height="100px" width="100px"}
+<img src="pic.jpeg" width="100" height="100" />
