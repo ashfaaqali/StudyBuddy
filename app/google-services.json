@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "516466568402",
+    "project_id": "study-buddy-ali",
+    "storage_bucket": "study-buddy-ali.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:516466568402:android:3f47b9ecf2f545cb5dd10b",
+        "android_client_info": {
+          "package_name": "com.example.bunktracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "516466568402-1dji5suacmm3mclg1mminijcoaf2s9m8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlWPbqPxbFEmTwIFgs7m6vzH9gY1xT-u8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "516466568402-1dji5suacmm3mclg1mminijcoaf2s9m8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
